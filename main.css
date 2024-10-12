@@ -1,0 +1,214 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+@font-face {
+  font-family: 'AquireBold'; /*a name to be used later*/
+  src: url('./public/Aquire-BW0ox.otf'); /*URL to font*/
+}
+.container {
+  width: 300vw;
+  height: 100vh;
+  display: flex;
+}
+.start1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f0f0f0;
+}
+.start1 h1 {
+  font-size: clamp(2rem, 10vw, 15rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-left: 5vw;
+  font-family: "AquireBold";
+}
+
+.start2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000;
+  font-family: "AquireBold";
+  font-size: 10rem;
+}
+.start2 h1{
+  margin-left: .3rem;
+  color: #ffee00;
+}
+.start3{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000;
+  font-family: "AquireBold";
+  font-size: 10rem;
+}
+.start3 h1{
+  margin-left: .3rem;
+  color: #ffee00;
+}
+
+.text-container {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  color: #ffee00;
+  font-family: "AquireBold";
+  background-color: #000;
+}
+.animate-text {
+  opacity: 1; 
+  margin: 20px 0;
+  font-size: 24px;
+}
+span.word {
+  opacity: 1; 
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #3498db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.container2 {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: calc(50% - 40px);
+}
+.container2::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #3498db;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #3498db;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #3498db;
+}
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #3498db;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #3498db transparent transparent;
+}
+.right::after {
+  left: -16px;
+}
+.content {
+  padding: 20px 30px;
+  background-color: #f8f9fa;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.content h2 {
+  color: #3498db;
+  font-family: "AquireBold";
+}
+  .content p {
+      margin-top: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+
+  
+
+  
+  
+  
+
+
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .container2 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .container2::before {
+    left: 60px;
+    border: medium solid #3498db;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #3498db transparent transparent;
+  }
+  .left::after, .right::after {
+    left: 15px;
+  }
+  .right {
+    left: 0%;
+  }
+  .start2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+  }
+  .start3{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+  }
+}
